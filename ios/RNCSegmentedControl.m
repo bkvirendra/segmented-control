@@ -51,6 +51,15 @@
                                 forState:UIControlStateSelected];
 }
 
+- (void)setFontFamily:(NSString *)fontFamily
+{
+    UIFont *font = [UIFont fontWithName:fontFamily size:15];
+    [self setTitleTextAttributes:@{NSFontAttributeName: font}
+                        forState:UIControlStateNormal];
+    [self setTitleTextAttributes:@{NSFontAttributeName: font}
+                        forState:UIControlStateSelected];
+}
+
 - (void)setBackgroundColor:(UIColor *)backgroundColor
 {
     #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) && \

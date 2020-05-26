@@ -71,4 +71,8 @@ export type SegmentedControlProps = $ReadOnly<{|
    * FontSize of the segmented control
    */
   fontSize?: ?number,
+  /**
+   * Font Family for Segmented Control
+   */
+  fontFamily?: ?string,  
 |}>;

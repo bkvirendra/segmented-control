@@ -82,6 +82,10 @@ export interface SegmentedControlProps extends ViewProps {
    * Font Size of Segmented Control
    */
   fontSize?: number;
+  /**
+   * Font Family for Segmented Control
+   */
+  fontFamily?: string;
 }
 
 /**

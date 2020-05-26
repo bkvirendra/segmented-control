@@ -16,6 +16,7 @@ type Props = $ReadOnly<{|
   selected: boolean,
   enabled: boolean,
   fontSize?: ?number,
+  fontFamily?: ?string,
 |}>;
 
 export const SegmentedControlTab = ({
@@ -27,6 +28,7 @@ export const SegmentedControlTab = ({
   textColor,
   activeTextColor,
   fontSize,
+  fontFamily,
 }: Props) => {
   const getColor = () => {
     if (selected && activeTextColor) {
@@ -53,6 +55,7 @@ export const SegmentedControlTab = ({
             {color},
             !(fontSize == null) && {fontSize},
             selected && styles.activeText,
+            fontFamily && {fontFamily}
           ]}>
           {value}
         </Text>
@@ -71,6 +74,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   activeText: {
-    fontWeight: '700',
+    fontWeight: '500',
   },
 });
